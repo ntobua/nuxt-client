@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/ga.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -43,6 +44,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-145135229-1'
+    }]
   ],
   /*
   ** Axios module configuration
